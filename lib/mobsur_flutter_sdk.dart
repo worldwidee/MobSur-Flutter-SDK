@@ -45,6 +45,14 @@ class MobSurSDK {
     }
   }
 
+  void updateClientId(String clientID) async {
+    if (clientID.isNotEmpty) {
+      _clientID = clientID;
+
+      _fetchData();
+    }
+  }
+
   void logEvent(String name, BuildContext context) async {
 
     var surveys = availableSurveys() ?? [];
