@@ -4,6 +4,13 @@ More information on https://mobsur.com
 ## Usage
 
 1. Add this package as dependency in `pubspec.yml`
+```
+  dependencies:
+    mobsur_flutter_sdk: ^1.0.0
+```
+  
+>Then run `lutter pub get`  
+  
 2. Import it in your project
 ```
 import 'package:mobsur_flutter_sdk/mobsur_flutter_sdk.dart';
@@ -11,7 +18,15 @@ import 'package:mobsur_flutter_sdk/mobsur_flutter_sdk.dart';
 
 3. Call the setup method.
 ```
-  MobSurSDK().setup('your-app-id-here', 'client-id-here');
+void main() {
+  WidgetsFlutterBinding.ensureInitialized()
+
+  // You can call this method somewhere else in the app instead,
+  // but it should not be right before an event, that should trigger a survey
+  MobSurSDK().setup('YOUR-APP-ID', 'user-id');
+  
+  runApp(const MyApp());
+}
 ```
 
 4. Call the event method, passing the build context.

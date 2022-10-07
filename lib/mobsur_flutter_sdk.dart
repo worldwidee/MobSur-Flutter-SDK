@@ -8,11 +8,12 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
 class MobSurSDK {
   static final MobSurSDK _instance = MobSurSDK._internal();
 
-  static const String _domain = 'api-staging.mobsur.com';
+  static const String _domain = 'api.mobsur.com';
   static const String _path = 'api/surveys';
   static const String _cacheKey = 'MobSurSurveysCache';
 
@@ -33,8 +34,11 @@ class MobSurSDK {
 
   SharedPreferences? _prefs;
 
+  PackageInfo? _packageInfo;
+
   void setup(String appID, String? clientID) async {
     _prefs = await SharedPreferences.getInstance();
+    _packageInfo = await PackageInfo.fromPlatform();
 
     _appID = appID;
 
@@ -151,11 +155,11 @@ class MobSurSDK {
       'app_id': _appID!,
       'user_reference_id': _clientID!,
       'platform': platform,
-      'app_version': '1.0',
+      'app_version': _packageInfo?.version ?? '',
     });
 
     var response = await http.get(url, headers: {
-      'Accept-Language': 'en'
+      'Accept-Language': Platform.localeName
     });
 
     if (response.statusCode != 200) {

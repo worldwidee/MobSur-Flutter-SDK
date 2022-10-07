@@ -1,6 +1,6 @@
 name: mobsur_flutter_sdk
-description: A new Flutter package project.
-version: 1.0.0
+description: Flutter SDK for mobsur.com
+version: 1.0.1
 homepage: https://mobsur.com
 
 environment:
@@ -13,6 +13,7 @@ dependencies:
   http: ^0.13.5
   webview_flutter: ^3.0.4
   shared_preferences: ^2.0.15
+  package_info_plus: ^1.0.2
 
 dev_dependencies:
   flutter_test:
