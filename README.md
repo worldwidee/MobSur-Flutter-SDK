@@ -6,7 +6,7 @@ More information on https://mobsur.com
 1. Add this package as dependency in `pubspec.yml`
 ```
   dependencies:
-    mobsur_flutter_sdk: ^1.0.3
+    mobsur_flutter_sdk: ^1.0.4
 ```
   
 >Then run `flutter pub get`  
@@ -37,6 +37,26 @@ MobSurSDK().logEvent('event-name-here', context);
 5. If you do not know the client id during the setup, you can pass it later. The client id can't be empty string.
 ```
   MobSurSDK().updateClientId('client-id-here');
+```
+
+### Important!!!
+For the Android platform, we have minimum SDK version requirements.  
+If you need to use the app on lower version than 32, please contact us.
+
+```
+// android/app/build.gradle:
+...
+android {
+  compileSdkVersion 32 // or higher
+  ...
+
+  defaultConfig {
+    ...
+    minSdkVersion 32 // or higher
+    ...
+  }
+}
+
 ```
 
 ### Recommendation 

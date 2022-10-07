@@ -1,3 +1,7 @@
+## 1.0.4
+
+* Updated README with Android min sdk versions
+
 ## 1.0.3
 
 * Bugfix: Handling of null value for the delay property
