@@ -263,7 +263,7 @@ class SurveyRule {
   });
 
   factory SurveyRule.fromJson(Map<String, dynamic> json) {
-    return SurveyRule(type: json['type'], name: json['name'], delay: json['delay'], occurred: json['occurred']);
+    return SurveyRule(type: json['type'], name: json['name'], delay: json['delay'] ?? 0, occurred: json['occurred']);
   }
 
   Map<String, dynamic> toJson() => {

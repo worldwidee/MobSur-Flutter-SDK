@@ -1,3 +1,7 @@
+## 1.0.3
+
+* Bugfix: Handling of null value for the delay property
+
 ## 1.0.2
 
 * Fixed typos in the README file

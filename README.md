@@ -6,7 +6,7 @@ More information on https://mobsur.com
 1. Add this package as dependency in `pubspec.yml`
 ```
   dependencies:
-    mobsur_flutter_sdk: ^1.0.2
+    mobsur_flutter_sdk: ^1.0.3
 ```
   
 >Then run `flutter pub get`  
