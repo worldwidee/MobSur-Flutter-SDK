@@ -9,7 +9,7 @@ More information on https://mobsur.com
     mobsur_flutter_sdk: ^1.0.0
 ```
   
->Then run `lutter pub get`  
+>Then run `flutter pub get`  
   
 2. Import it in your project
 ```
