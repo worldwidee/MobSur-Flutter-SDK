@@ -39,6 +39,10 @@ MobSurSDK().logEvent('event-name-here', context);
   MobSurSDK().updateClientId('client-id-here');
 ```
 
+## Sample project
+
+A complete project with the SDK can be found in our [GitHub repository](https://github.com/eden-tech-labs/MobSur-Flutter-App).
+
 ### Important!!!
 For the Android platform, we have minimum SDK version requirements.  
 If you need to use the app on lower version than 32, please contact us.
